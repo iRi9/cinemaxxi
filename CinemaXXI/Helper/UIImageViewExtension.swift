@@ -20,7 +20,7 @@ extension UIImageView {
             return
         }
 
-        ApiService().downloadImage(url: url) { [weak self] data, error  in
+        Service.shared.downloadImage(url: url) { [weak self] data, error  in
             guard let self = self else { return }
 
             if error == nil {

@@ -8,13 +8,13 @@
 import XCTest
 @testable import CinemaXXI
 
-class ApiServiceTest: XCTestCase {
+class HomeApiServiceTest: XCTestCase {
 
-    var sut: ApiService?
+    var sut: HomeApiService?
 
     override func setUp() {
         super.setUp()
-        sut = ApiService()
+        sut = HomeApiService()
     }
 
     override func tearDown() {
@@ -34,20 +34,6 @@ class ApiServiceTest: XCTestCase {
             for movie in movies {
                 XCTAssertNotNil(movie.id)
             }
-        }
-        wait(for: [expect], timeout: 3.1)
-    }
-
-    func test_download_image() {
-        let sut = self.sut!
-        let imgUrl = URL(string: "https://image.tmdb.org/t/p/w185/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg")!
-
-        let expect = XCTestExpectation(description: "callback")
-
-        sut.downloadImage(url: imgUrl) { data, error in
-            expect.fulfill()
-
-            XCTAssertNotNil(data)
         }
         wait(for: [expect], timeout: 3.1)
     }

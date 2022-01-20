@@ -8,8 +8,7 @@
 import Foundation
 
 class HomeViewModel {
-    var api: ApiServiceProtocol
-    private var movies: [Movie] = [Movie]()
+    var api: HomeApiServiceProtocol
     private var cellViewModels: [MovieCellViewModel] = [MovieCellViewModel]() {
         didSet {
             self.reloadTableView?()
@@ -33,7 +32,7 @@ class HomeViewModel {
     var showAlert: (() -> Void)?
     var updateLoadingStatus: (() -> Void)?
 
-    init(api: ApiServiceProtocol = ApiService()) {
+    init(api: HomeApiServiceProtocol = HomeApiService()) {
         self.api = api
     }
 
@@ -62,7 +61,7 @@ class HomeViewModel {
     }
 
     private func createMovieCellViewModel(movie: Movie) -> MovieCellViewModel {
-        MovieCellViewModel(title: movie.title, releaseDate: movie.releaseDate, overview: movie.overview, posterUrl: "https://image.tmdb.org/t/p/w185\(movie.posterPath)", state: .new, posterDate: Data())
+        MovieCellViewModel(id: movie.id,title: movie.title, releaseDate: movie.releaseDate, overview: movie.overview, posterUrl: "https://image.tmdb.org/t/p/w185\(movie.posterPath)")
     }
 
 }
@@ -72,7 +71,6 @@ enum MovieCellDownloadState {
 }
 
 struct MovieCellViewModel {
+    let id: Int
     let title, releaseDate, overview, posterUrl: String
-    var state: MovieCellDownloadState
-    var posterDate: Data
 }

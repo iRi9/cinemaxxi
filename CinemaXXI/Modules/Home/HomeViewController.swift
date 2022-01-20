@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, CategoryProtocol {
     @IBOutlet weak var btnCategory: UIButton!
 
     lazy var viewModel: HomeViewModel = {
-        HomeViewModel(api: ApiService())
+        HomeViewModel(api: HomeApiService())
     }()
 
     private var selectedCategory = 0
@@ -70,14 +70,6 @@ class HomeViewController: UIViewController, CategoryProtocol {
         // TODO: go to favorite page
     }
 
-    private func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default)
-        alertController.addAction(action)
-
-        present(alertController, animated: true)
-    }
-
     func didSelectCategory(category: Int) {
         selectedCategory = category
         btnCategory.setTitle("Category: \(MovieCategory(rawValue: selectedCategory)?.display ?? "-")", for: .normal)
@@ -101,7 +93,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 150.0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: go to detail page
+        let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        detailViewController.movieId = viewModel.getCellViewModel(at: indexPath).id
+        detailViewController.movieTitle = viewModel.getCellViewModel(at: indexPath).title
+        let navigationController = UINavigationController(rootViewController: detailViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }
 
@@ -162,5 +159,15 @@ class CategoryViewController: UITableViewController {
             delegate?.didSelectCategory(category: indexPath.row)
             dismiss(animated: true)
         }
+    }
+}
+
+extension UIViewController {
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        alertController.addAction(action)
+
+        present(alertController, animated: true)
     }
 }

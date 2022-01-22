@@ -48,6 +48,26 @@ class DetailViewModelTest: XCTestCase {
         XCTAssertEqual(sut.alertMessage, error.rawValue)
     }
 
+    func test_loading_when_fetch_movie() {
+        // Given
+        var loadingStatus = false
+        let expect = XCTestExpectation(description: "Loading status updated")
+        sut?.updateLoadingStatus = { [weak sut] in
+            loadingStatus = sut!.isLoading
+            expect.fulfill()
+        }
+
+        // When
+        sut.fetchDetailMovie(id: movieId)
+
+        // Then
+        XCTAssertTrue( loadingStatus )
+
+        wait(for: [expect], timeout: 1.0)
+
+    }
+
+
 }
 
 class MockDetailApi: DetailApiServiceProtocol {

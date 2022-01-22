@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631FB8F8279C27AB004D19F0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631FB8F7279C27AB004D19F0 /* UIViewControllerExtension.swift */; };
 		633338712797BB5E00949109 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6333386F2797BB5E00949109 /* FavoriteViewController.swift */; };
 		633338722797BB5E00949109 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633338702797BB5E00949109 /* FavoriteViewController.xib */; };
 		633338752797BBBF00949109 /* TmdbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338732797BBBF00949109 /* TmdbTableViewCell.swift */; };
@@ -31,6 +32,13 @@
 		633338AC27997A8E00949109 /* DetailMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633338AA27997A8E00949109 /* DetailMovieTableViewCell.xib */; };
 		633338AF279981E200949109 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338AD279981E200949109 /* ReviewTableViewCell.swift */; };
 		633338B0279981E200949109 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633338AE279981E200949109 /* ReviewTableViewCell.xib */; };
+		633338B6279A492A00949109 /* FavoriteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338B5279A492A00949109 /* FavoriteProvider.swift */; };
+		633338BD279A4B7000949109 /* CinemaXXI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 633338BB279A4B7000949109 /* CinemaXXI.xcdatamodeld */; };
+		633338BF279A4C7D00949109 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338BE279A4C7D00949109 /* Favorite.swift */; };
+		633338C2279A5EC300949109 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338C1279A5EC300949109 /* CoreDataManager.swift */; };
+		633338C5279A629F00949109 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338C4279A629F00949109 /* FavoriteViewModel.swift */; };
+		633338C7279AA1DB00949109 /* FavoriteViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338C6279AA1DB00949109 /* FavoriteViewModelTest.swift */; };
+		633338C9279AA51600949109 /* FavoriteProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633338C8279AA51600949109 /* FavoriteProviderTest.swift */; };
 		637353A32797A79500B217BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637353A22797A79500B217BD /* AppDelegate.swift */; };
 		637353A52797A79500B217BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637353A42797A79500B217BD /* SceneDelegate.swift */; };
 		637353A72797A79500B217BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637353A62797A79500B217BD /* HomeViewController.swift */; };
@@ -50,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631FB8F7279C27AB004D19F0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		6333386F2797BB5E00949109 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		633338702797BB5E00949109 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		633338732797BBBF00949109 /* TmdbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +84,13 @@
 		633338AA27997A8E00949109 /* DetailMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieTableViewCell.xib; sourceTree = "<group>"; };
 		633338AD279981E200949109 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		633338AE279981E200949109 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		633338B5279A492A00949109 /* FavoriteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProvider.swift; sourceTree = "<group>"; };
+		633338BC279A4B7000949109 /* CinemaXXI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CinemaXXI.xcdatamodel; sourceTree = "<group>"; };
+		633338BE279A4C7D00949109 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		633338C1279A5EC300949109 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		633338C4279A629F00949109 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		633338C6279AA1DB00949109 /* FavoriteViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModelTest.swift; sourceTree = "<group>"; };
+		633338C8279AA51600949109 /* FavoriteProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProviderTest.swift; sourceTree = "<group>"; };
 		6373539F2797A79500B217BD /* CinemaXXI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaXXI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637353A22797A79500B217BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637353A42797A79500B217BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +128,8 @@
 				633338A32799186700949109 /* ServiceTest.swift */,
 				633338A52799467B00949109 /* DetailApiServiceTest.swift */,
 				633338A72799637900949109 /* DetailViewModelTest.swift */,
+				633338C6279AA1DB00949109 /* FavoriteViewModelTest.swift */,
+				633338C8279AA51600949109 /* FavoriteProviderTest.swift */,
 			);
 			path = CinemaXXITests;
 			sourceTree = "<group>";
@@ -128,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				633338922798516500949109 /* UIImageViewExtension.swift */,
+				631FB8F7279C27AB004D19F0 /* UIViewControllerExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -163,6 +182,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		633338C0279A5E5400949109 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				633338BB279A4B7000949109 /* CinemaXXI.xcdatamodeld */,
+				633338C1279A5EC300949109 /* CoreDataManager.swift */,
+				633338B5279A492A00949109 /* FavoriteProvider.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		637353962797A79500B217BD = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +213,7 @@
 		637353A12797A79500B217BD /* CinemaXXI */ = {
 			isa = PBXGroup;
 			children = (
+				633338C0279A5E5400949109 /* CoreData */,
 				633338A027990BF600949109 /* Network */,
 				6333389127984BF200949109 /* Helper */,
 				637353BA2797A84400B217BD /* Resources */,
@@ -218,6 +248,7 @@
 			children = (
 				633338792797C2B700949109 /* Movie.swift */,
 				6333389B2799021300949109 /* Review.swift */,
+				633338BE279A4C7D00949109 /* Favorite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +289,7 @@
 			children = (
 				6333386F2797BB5E00949109 /* FavoriteViewController.swift */,
 				633338702797BB5E00949109 /* FavoriteViewController.xib */,
+				633338C4279A629F00949109 /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -374,6 +406,8 @@
 				633338892797CBB600949109 /* HomeApiServiceTest.swift in Sources */,
 				6333388D2797D50F00949109 /* HomeViewModelTest.swift in Sources */,
 				633338A42799186700949109 /* ServiceTest.swift in Sources */,
+				633338C7279AA1DB00949109 /* FavoriteViewModelTest.swift in Sources */,
+				633338C9279AA51600949109 /* FavoriteProviderTest.swift in Sources */,
 				633338A62799467B00949109 /* DetailApiServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,15 +422,21 @@
 				637353A32797A79500B217BD /* AppDelegate.swift in Sources */,
 				6333388B2797CDF000949109 /* HomeViewModel.swift in Sources */,
 				633338782797C01900949109 /* HomeApiService.swift in Sources */,
+				633338C5279A629F00949109 /* FavoriteViewModel.swift in Sources */,
 				6333389C2799021300949109 /* Review.swift in Sources */,
 				633338932798516500949109 /* UIImageViewExtension.swift in Sources */,
 				633338752797BBBF00949109 /* TmdbTableViewCell.swift in Sources */,
 				633338AF279981E200949109 /* ReviewTableViewCell.swift in Sources */,
+				633338BD279A4B7000949109 /* CinemaXXI.xcdatamodeld in Sources */,
+				633338BF279A4C7D00949109 /* Favorite.swift in Sources */,
 				633338972798FAFC00949109 /* DetailViewController.swift in Sources */,
 				633338712797BB5E00949109 /* FavoriteViewController.swift in Sources */,
 				6333389A2798FB2400949109 /* DetailViewModel.swift in Sources */,
 				633338AB27997A8E00949109 /* DetailMovieTableViewCell.swift in Sources */,
+				633338B6279A492A00949109 /* FavoriteProvider.swift in Sources */,
 				637353A52797A79500B217BD /* SceneDelegate.swift in Sources */,
+				633338C2279A5EC300949109 /* CoreDataManager.swift in Sources */,
+				631FB8F8279C27AB004D19F0 /* UIViewControllerExtension.swift in Sources */,
 				6333389F27990A4300949109 /* DetailApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +717,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		633338BB279A4B7000949109 /* CinemaXXI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				633338BC279A4B7000949109 /* CinemaXXI.xcdatamodel */,
+			);
+			currentVersion = 633338BC279A4B7000949109 /* CinemaXXI.xcdatamodel */;
+			path = CinemaXXI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 637353972797A79500B217BD /* Project object */;
 }

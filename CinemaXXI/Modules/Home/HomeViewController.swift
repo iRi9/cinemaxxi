@@ -67,7 +67,10 @@ class HomeViewController: UIViewController, CategoryProtocol {
     }
 
     @objc func favoriteAction() {
-        // TODO: go to favorite page
+        let favoriteViewController = FavoriteViewController(nibName: "FavoriteViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: favoriteViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 
     func didSelectCategory(category: Int) {
@@ -159,15 +162,5 @@ class CategoryViewController: UITableViewController {
             delegate?.didSelectCategory(category: indexPath.row)
             dismiss(animated: true)
         }
-    }
-}
-
-extension UIViewController {
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default)
-        alertController.addAction(action)
-
-        present(alertController, animated: true)
     }
 }

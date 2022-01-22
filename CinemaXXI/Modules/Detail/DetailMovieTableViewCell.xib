@@ -43,7 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30q-pK-6Zp">
-                        <rect key="frame" x="166" y="103" width="237" height="142"/>
+                        <rect key="frame" x="166" y="103" width="225" height="142"/>
                         <string key="text">The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -59,6 +59,9 @@
                         <state key="normal" image="heart" catalog="system">
                             <color key="titleColor" systemColor="systemPinkColor"/>
                         </state>
+                        <connections>
+                            <action selector="FavoriteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mNT-3M-PWl"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff1-7d-v6u">
                         <rect key="frame" x="166" y="87" width="237" height="16"/>
@@ -77,13 +80,13 @@
                     <constraint firstItem="hpw-Jw-dgO" firstAttribute="leading" secondItem="RVJ-Zc-QiH" secondAttribute="trailing" constant="8" symbolic="YES" id="Cms-Ey-OOD"/>
                     <constraint firstItem="RVJ-Zc-QiH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Fvc-Ra-fVf"/>
                     <constraint firstItem="W0m-Zp-xa9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="PZH-dN-dtJ"/>
-                    <constraint firstItem="30q-pK-6Zp" firstAttribute="trailing" secondItem="Ff1-7d-v6u" secondAttribute="trailing" id="QK5-r7-kgw"/>
                     <constraint firstAttribute="trailing" secondItem="Ff1-7d-v6u" secondAttribute="trailing" constant="8" id="QOL-of-1Vj"/>
                     <constraint firstItem="30q-pK-6Zp" firstAttribute="top" secondItem="Ff1-7d-v6u" secondAttribute="bottom" id="T12-mM-S6a"/>
                     <constraint firstItem="W0m-Zp-xa9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Uwu-PZ-CbE"/>
                     <constraint firstItem="Ff1-7d-v6u" firstAttribute="top" secondItem="xCk-Ex-B1n" secondAttribute="bottom" constant="10" id="WFO-4f-5SX"/>
                     <constraint firstAttribute="bottom" secondItem="W0m-Zp-xa9" secondAttribute="bottom" constant="8" id="ZkQ-4V-buA"/>
                     <constraint firstAttribute="bottom" secondItem="30q-pK-6Zp" secondAttribute="bottom" constant="8" id="akw-DN-YNn"/>
+                    <constraint firstAttribute="trailing" secondItem="30q-pK-6Zp" secondAttribute="trailing" constant="20" symbolic="YES" id="ctI-1e-vfV"/>
                     <constraint firstItem="RVJ-Zc-QiH" firstAttribute="leading" secondItem="W0m-Zp-xa9" secondAttribute="trailing" constant="8" symbolic="YES" id="flW-bC-Kez"/>
                     <constraint firstItem="hpw-Jw-dgO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hzT-rQ-Z49"/>
                     <constraint firstItem="xCk-Ex-B1n" firstAttribute="top" secondItem="RVJ-Zc-QiH" secondAttribute="bottom" id="iy9-HT-Gp9"/>

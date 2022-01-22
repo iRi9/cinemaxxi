@@ -58,11 +58,11 @@ class HomeViewModelTest: XCTestCase {
             expect.fulfill()
         }
 
-        // When getting data news
+        // When
         sut.fetchMovie(category: movieCategory, page: 1)
         XCTAssertTrue( loadingStatus )
 
-        // Whwn finish
+        // Then
         mockApi.fetchMovieSuccess()
         XCTAssertFalse( loadingStatus )
 

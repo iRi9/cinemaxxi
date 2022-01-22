@@ -61,7 +61,7 @@ class HomeViewModel {
     }
 
     private func createMovieCellViewModel(movie: Movie) -> MovieCellViewModel {
-        MovieCellViewModel(id: movie.id,title: movie.title, releaseDate: movie.releaseDate, overview: movie.overview, posterUrl: "https://image.tmdb.org/t/p/w185\(movie.posterPath)")
+        MovieCellViewModel(id: movie.id,title: movie.title, releaseDate: movie.releaseDate, overview: movie.overview, posterUrl: "https://image.tmdb.org/t/p/w185\(movie.posterPath)", posterData: Data())
     }
 
 }
@@ -70,7 +70,11 @@ enum MovieCellDownloadState {
     case new, downloaded, failed
 }
 
-struct MovieCellViewModel {
-    let id: Int
-    let title, releaseDate, overview, posterUrl: String
+struct MovieCellViewModel: TmdbTableViewCellProtocol {
+    var id: Int
+    var title: String
+    var releaseDate: String
+    var overview: String
+    var posterUrl: String
+    var posterData: Data
 }

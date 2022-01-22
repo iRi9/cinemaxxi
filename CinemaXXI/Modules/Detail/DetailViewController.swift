@@ -79,6 +79,9 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                 fatalError("DetailMovieTableViewCell not found")
             }
             cell.detailMovieCellViewModel = data
+            cell.favoriteClosure = {
+                self.viewModel.favoriteMovieAction(at: indexPath)
+            }
             return cell
         case .sparator:
             let cell = UITableViewCell.init(style: .value1, reuseIdentifier: "SparatorCell")
@@ -97,7 +100,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch data.type {
         case .movie:
-            return UITableView.automaticDimension
+            return 280.0
         case .sparator:
             return 50.0
         case .review:

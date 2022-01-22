@@ -53,7 +53,6 @@ class Service {
     func downloadImage(url: URL, completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                print(error.localizedDescription)
                 completion(nil, error)
             }
 

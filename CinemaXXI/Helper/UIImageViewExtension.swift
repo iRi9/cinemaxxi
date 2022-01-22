@@ -31,7 +31,7 @@ extension UIImageView {
                 imageCache.setObject(imageToCache, forKey: urlString as AnyObject)
                 self.image = UIImage(data: dataImg)
             } else {
-                self.image = UIImage(named: "noimage")
+                self.image = UIImage(named: "tmdb")
             }
 
         }

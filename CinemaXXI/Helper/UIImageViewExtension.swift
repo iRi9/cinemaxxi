@@ -20,7 +20,7 @@ extension UIImageView {
             return
         }
 
-        ApiService().downloadImage(url: url) { [weak self] data, error  in
+        Service.shared.downloadImage(url: url) { [weak self] data, error  in
             guard let self = self else { return }
 
             if error == nil {
@@ -31,7 +31,7 @@ extension UIImageView {
                 imageCache.setObject(imageToCache, forKey: urlString as AnyObject)
                 self.image = UIImage(data: dataImg)
             } else {
-                self.image = UIImage(named: "noimage")
+                self.image = UIImage(named: "tmdb")
             }
 
         }

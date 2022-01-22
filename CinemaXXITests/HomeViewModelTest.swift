@@ -11,23 +11,23 @@ import XCTest
 class HomeViewModelTest: XCTestCase {
     var sut: HomeViewModel!
     var mockApi: MockApi!
-    var movieCategory = "popular"
+    var movieCategory: String!
 
     override func setUp() {
         super.setUp()
         mockApi = MockApi()
         sut = HomeViewModel(api: mockApi)
+        movieCategory = "popular"
     }
 
     override func tearDown() {
         sut = nil
         mockApi = nil
+        movieCategory = nil
         super.tearDown()
     }
 
-    func test_fetch_movie() {
-        // Given
-        mockApi.completeMovies = [Movie]()
+    func test_fetch_movie_success() {
 
         // When
         sut.fetchMovie(category: movieCategory, page: 1)
@@ -58,11 +58,11 @@ class HomeViewModelTest: XCTestCase {
             expect.fulfill()
         }
 
-        // When getting data news
+        // When
         sut.fetchMovie(category: movieCategory, page: 1)
         XCTAssertTrue( loadingStatus )
 
-        // Whwn finish
+        // Then
         mockApi.fetchMovieSuccess()
         XCTAssertFalse( loadingStatus )
 
@@ -107,7 +107,7 @@ class HomeViewModelTest: XCTestCase {
 
 }
 
-class MockApi: ApiServiceProtocol {
+class MockApi: HomeApiServiceProtocol {
     var isFetchMovieCalled = false
 
     var completeClosure: ((Bool, [Movie], ApiError?) -> Void)!
